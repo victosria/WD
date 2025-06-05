@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration</title>
+</head>
+<body>
+  <h2>Student Registration</h2>
+  <p>Please fill out all required fields to complete your registration.</p>
+
+  <form>
+    <label>First Name*: <input type="text" name="firstName" required></label><br><br>
+    
+    <label>Last Name*: <input type="text" name="lastName" required></label><br><br>
+    
+    <label>Email Address*: <input type="email" name="email" required></label><br><br>
+    
+    <label>Phone Number: <input type="tel" name="phone"></label><br><br>
+    
+    <label>Date of Birth: <input type="date" name="dob"></label><br><br>
+    
+    <label>Program of Study*: 
+      <select name="program" required>
+        <option value="">Select your program</option>
+        <option value="cs">Computer Science</option>
+        <option value="bio">Biology</option>
+        <option value="bus">Business</option>
+      </select>
+    </label><br><br>
+    
+    <label>Year Level*:
+      <select name="year" required>
+        <option value="freshman">Freshman</option>
+        <option value="sophomore">Sophomore</option>
+        <option value="junior">Junior</option>
+        <option value="senior">Senior</option>
+      </select>
+    </label><br><br>
+    
+    <p>Interests (select all that apply):</p>
+    <label><input type="checkbox" name="interests" value="sports"> Sports & Recreation</label><br>
+    <label><input type="checkbox" name="interests" value="music"> Music & Arts</label><br>
+    <label><input type="checkbox" name="interests" value="tech"> Technology</label><br>
+    <label><input type="checkbox" name="interests" value="volunteer"> Volunteering</label><br>
+    <label><input type="checkbox" name="interests" value="reading"> Reading & Writing</label><br>
+    <label><input type="checkbox" name="interests" value="travel"> Travel & Culture</label><br><br>
+
+    <label>Additional Comments:<br>
+      <textarea name="comments" rows="4" cols="40"></textarea>
+    </label><br><br>
+    
+    <button type="submit">Complete Registration</button>
+  </form>
+</body>
+</html>
