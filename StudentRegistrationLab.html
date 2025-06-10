@@ -1,53 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Student Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #E6E6FA; /* fundo roxo pastel */
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4B0082; /* roxo escuro */
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #D8BFD8; /* lilás suave */
+      border-radius: 6px;
+      background-color: #fdfbff;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #BA55D3; /* roxo vibrante */
+      box-shadow: 0 0 5px rgba(186, 85, 211, 0.5);
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #BA55D3; /* roxo médio */
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #9932CC; /* roxo mais escuro */
+    }
+  </style>
 </head>
 <body>
   <h2>Student Registration</h2>
-  <p>Please fill out all required fields to complete your registration.</p>
-
   <form>
-    <label>First Name*: <input type="text" name="firstName" required></label><br><br>
-    
-    <label>Last Name*: <input type="text" name="lastName" required></label><br><br>
-    
-    <label>Email Address*: <input type="email" name="email" required></label><br><br>
-    
-    <label>Phone Number: <input type="tel" name="phone"></label><br><br>
-    
-    <label>Date of Birth: <input type="date" name="dob"></label><br><br>
-    
-    <label>Program of Study*: 
-      <select name="program" required>
-        <option value="">Select your program</option>
-        <option value="cs">Computer Science</option>
-        <option value="bio">Biology</option>
-        <option value="bus">Business</option>
-      </select>
-    </label><br><br>
-    
-    <label>Year Level*:
-      <select name="year" required>
-        <option value="freshman">Freshman</option>
-        <option value="sophomore">Sophomore</option>
-        <option value="junior">Junior</option>
-        <option value="senior">Senior</option>
-      </select>
-    </label><br><br>
-    
-    <p>Interests (select all that apply):</p>
-    <label><input type="checkbox" name="interests" value="sports"> Sports & Recreation</label><br>
-    <label><input type="checkbox" name="interests" value="music"> Music & Arts</label><br>
-    <label><input type="checkbox" name="interests" value="tech"> Technology</label><br>
-    <label><input type="checkbox" name="interests" value="volunteer"> Volunteering</label><br>
-    <label><input type="checkbox" name="interests" value="reading"> Reading & Writing</label><br>
-    <label><input type="checkbox" name="interests" value="travel"> Travel & Culture</label><br><br>
+    <label for="first-name">First Name *</label>
+    <input type="text" id="first-name" name="first-name" required>
 
-    <label>Additional Comments:<br>
-      <textarea name="comments" rows="4" cols="40"></textarea>
-    </label><br><br>
-    
+    <label for="last-name">Last Name *</label>
+    <input type="text" id="last-name" name="last-name" required>
+
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob">
+
+    <label for="program">Program of Study *</label>
+    <select id="program" name="program" required>
+      <option value="">Select your program</option>
+      <option value="cs">Computer Science</option>
+      <option value="bio">Biology</option>
+      <option value="bus">Business</option>
+    </select>
+
+    <label for="year">Year Level *</label>
+    <select id="year" name="year" required>
+      <option value="freshman">Freshman</option>
+      <option value="sophomore">Sophomore</option>
+      <option value="junior">Junior</option>
+      <option value="senior">Senior</option>
+    </select>
+
+    <label>Interests (Select all that apply)</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="interests" value="sports"> Sports & Recreation</label>
+      <label><input type="checkbox" name="interests" value="music"> Music & Arts</label>
+      <label><input type="checkbox" name="interests" value="tech"> Technology</label>
+      <label><input type="checkbox" name="interests" value="volunteer"> Volunteering</label>
+      <label><input type="checkbox" name="interests" value="reading"> Reading & Writing</label>
+      <label><input type="checkbox" name="interests" value="travel"> Travel & Culture</label>
+    </div>
+
+    <label for="comments">Additional Comments</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else you'd like us to know..."></textarea>
+
     <button type="submit">Complete Registration</button>
   </form>
 </body>
